@@ -1,0 +1,262 @@
+/*==============Google font link============*/
+
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Alata&family=Arvo:wght@700&family=Barlow+Semi+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Commissioner:wght@100..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&family=Inter:wght@400;700&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Jost:ital,wght@0,100..900;1,100..900&family=League+Spartan:wght@100..900&family=Lora&family=Manrope:wght@200..800&family=Merriweather:wght@300&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Outfit:wght@400;800&family=Overpass:ital,wght@0,100..900;1,100..900&family=Plus+Jakarta+Sans:wght@500;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Preahvihear&family=Public+Sans:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Red+Hat+Text:ital,wght@0,400;0,600;0,700;1,400&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Rubik:ital,wght@0,300..900;1,300..900&family=Space+Grotesk&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap");
+
+/*=========================Custom Properties========================*/
+:root {
+  /*==========Colors================*/
+
+  --pale-blue: hsl(243, 100%, 93%);
+  --grayish-blue: hsl(229, 7%, 55%);
+  --dark-blue: hsl(228, 56%, 26%);
+  --very-dark-blue: hsl(229, 57%, 11%);
+
+  /*===========Typography==========*/
+
+  --font-family-Raleway: "Raleway", sans-serif;
+}
+
+/*=========================Reset===========================*/
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+button,
+a,
+input {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+  height: auto;
+}
+
+button,
+input {
+  background: none;
+  border: none;
+  outline: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 30px;
+  scrollbar-width: thin;
+}
+
+body {
+  height: 100vh;
+  font-family: var(--font-family-Raleway);
+  background-color: var(--very-dark-blue);
+}
+
+/*=========================Reused styles===========================*/
+
+.container {
+  min-height: 100%;
+  padding: 60px 25px;
+  height: 100vh;
+  background-image: url("/images/bg-mobile.png");
+  background-size: cover;
+}
+
+.intro-card,
+.data-card {
+  background-color: var(--dark-blue);
+  border-radius: 12px;
+}
+
+.grid {
+  display: grid;
+}
+
+.left_gbs span,
+.labels span {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/*=========================Main styles===========================*/
+
+.storage-component {
+  display: flex;
+  flex-direction: column;
+  max-width: 375px;
+  margin-inline: auto;
+  gap: 20px;
+}
+
+.intro-card {
+  max-width: max-content;
+  padding-block: 30px;
+  padding-inline: 30px 80px;
+  border-top-right-radius: 120px;
+}
+
+.intro-icons {
+  margin-block-start: 25px;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.intro-icons > div {
+  width: 50px;
+  height: 50px;
+  padding: 13px 15px;
+  border-radius: 10px;
+  background-color: var(--very-dark-blue);
+  display: grid;
+  place-content: center;
+}
+
+.data-card {
+  padding: 30px 30px 60px;
+  position: relative;
+}
+
+.card-text {
+  color: var(--pale-blue);
+  font-size: 18px;
+  text-align: center;
+}
+
+.card-text span {
+  font-weight: 700;
+}
+
+.data-progress {
+  position: relative;
+  margin-block-start: 20px;
+  padding-block: 10px;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: var(--very-dark-blue);
+}
+
+.data-progress::before {
+  position: absolute;
+  content: "";
+  width: 80%;
+  height: 80%;
+  background-color: green;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  border-radius: 15px;
+  background: linear-gradient(
+    to right,
+    rgb(245, 209, 109) 30%,
+    rgb(218, 85, 107) 70%
+  );
+}
+
+.data-progress::after {
+  content: "";
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 21%;
+  border-radius: 20px;
+}
+
+.left_gbs {
+  position: absolute;
+  background-color: var(--pale-blue);
+  padding: 18px 25px;
+  border-radius: 12px;
+  width: max-content;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.left_gbs span {
+  color: var(--grayish-blue);
+}
+
+.labels {
+  display: flex;
+  justify-content: space-between;
+  margin-block: 10px;
+}
+
+.labels span {
+  color: var(--pale-blue);
+}
+
+/*===========Media queries==========*/
+
+@media (min-width: 992px) {
+  .container {
+    background-image: url("/images/bg-desktop.png");
+    background-size: 100% 350px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+  }
+
+  .storage-component {
+    flex-direction: row;
+    align-items: center;
+    max-width: 870px;
+    height: 100%;
+  }
+
+  .data-card {
+    width: 630px;
+    padding: 20px 30px;
+    align-self: flex-end;
+  }
+
+  .left_gbs {
+    top: 0;
+    bottom: unset;
+    left: unset;
+    right: 40px;
+    transform: translateY(-80%);
+    border-bottom-right-radius: 0;
+  }
+
+  .left_gbs::before {
+    content: "";
+    position: absolute;
+    width: 17px;
+    height: 25px;
+    bottom: -28px;
+    right: 0;
+    border-bottom: 30px solid var(--pale-blue);
+    border-right: 15px solid transparent;
+    transform: rotate(180deg);
+  }
+
+  .data-card,
+  .intro-card {
+    margin-block: auto;
+  }
+}
