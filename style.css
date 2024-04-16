@@ -219,6 +219,8 @@ body {
     background-size: 100% 350px;
     background-repeat: no-repeat;
     background-position: bottom;
+    display: grid;
+    place-content: center;
   }
 
   .storage-component {
@@ -253,10 +255,5 @@ body {
     border-bottom: 30px solid var(--pale-blue);
     border-right: 15px solid transparent;
     transform: rotate(180deg);
-  }
-
-  .data-card,
-  .intro-card {
-    margin-block: auto;
   }
 }
